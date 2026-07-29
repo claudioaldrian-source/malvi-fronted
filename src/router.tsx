@@ -4,6 +4,7 @@ import Home from '@/pages/Home/Home'
 import Login from '@/pages/Login/Login'
 import Register from '@/pages/Register/Register'
 import CreateUser from '@/pages/CreateUser/CreateUser'
+import Dashboard from '@/pages/Dashboard/Dashboard'
 
 const rootRoute = createRootRoute({
   component: Outlet,
@@ -33,11 +34,18 @@ const createUserRoute = createRoute({
   component: CreateUser,
 })
 
+const dashboardRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/dashboard',
+  component: Dashboard,
+})
+
 const routeTree = rootRoute.addChildren([
   homeRoute,
   loginRoute,
   registerRoute,
   createUserRoute,
+  dashboardRoute,
 ])
 
 export const router = createRouter({ routeTree })

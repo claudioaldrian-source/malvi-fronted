@@ -1,0 +1,45 @@
+.dashboard{
+
+    min-height:100vh;
+
+    background:#0b0d12;
+
+    color:white;
+
+    padding:60px;
+
+}
+
+.dashboard h1{
+
+    text-align:center;
+
+    font-size:42px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    margin-top:12px;
+
+    margin-bottom:50px;
+
+    color:#9ba3af;
+
+}
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:28px;
+
+    max-width:900px;
+
+    margin:auto;
+
+}

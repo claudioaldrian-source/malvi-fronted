@@ -1,0 +1,53 @@
+.card{
+
+    width:220px;
+
+    height:160px;
+
+    background:#171b22;
+
+    border:1px solid #2a3140;
+
+    border-radius:14px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#2da8ff;
+
+    box-shadow:0 0 20px rgba(45,168,255,.35);
+
+}
+
+.icon{
+
+    font-size:52px;
+
+    margin-bottom:18px;
+
+}
+
+h3{
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:600;
+
+}
