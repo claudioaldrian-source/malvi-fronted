@@ -313,3 +313,9 @@
   align-items: center;
   gap: 12px;
   }
+
+  .noActions {
+  color: #888;
+  font-size: 13px;
+  font-style: italic;
+}

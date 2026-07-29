@@ -109,11 +109,12 @@ const apellido = localStorage.getItem('apellido')
 </div>
         
         <div className={styles.headerActions}>
-
+{role !== 'USER' && (
           <Button variant="primary" onClick={() => { if (role === 'ADMIN') { setShowPermissionModal(true)
-  return } navigate({ to: '/create-user' })  }}> + Agregar</Button>
+  return } navigate({ to: '/create-user' })  }}> + Agregar</Button>)}
 
           <Button variant="secondary" onClick={handleLogout}>Cerrar sesión</Button>
+          
         </div>
       </div>
 
@@ -161,17 +162,29 @@ const apellido = localStorage.getItem('apellido')
                       {user.role}
                     </span>
                   </td>
-                  <td className={styles.td}>
-                    <div className={styles.actions}>
-                      <button className={styles.actionBtn} onClick={() => openView(user)}>Ver</button>
-                      <button
-                        className={`${styles.actionBtn} ${styles.actionBtnEdit}`}
-                        onClick={() => openEdit(user)}
-                      >
-                        Editar
-                      </button>
-                    </div>
-                  </td>
+                  
+<td className={styles.td}>
+  {role === 'USER' ? (
+    <span className={styles.noActions}>Sin permisos</span>
+  ) : (
+    <div className={styles.actions}>
+      <button
+        className={styles.actionBtn}
+        onClick={() => openView(user)}
+      >
+        Ver
+      </button>
+
+      <button
+        className={`${styles.actionBtn} ${styles.actionBtnEdit}`}
+        onClick={() => openEdit(user)}
+      >
+        Editar
+      </button>
+    </div>
+  )}
+</td>
+
                 </tr>
               ))}
             </tbody>
