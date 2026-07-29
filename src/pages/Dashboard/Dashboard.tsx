@@ -1,51 +1,23 @@
 import styles from "./Dashboard.module.css";
 
-import DashboardCard from "@/components/ui/DashboardCard/DashboardCard";
+import Header from "@/components/blocks/Header/Header";
+import Sidebar from "@/components/blocks/Sidebar/Sidebar";
+
 
 export default function Dashboard() {
   return (
-    <div className={styles.dashboard}>
+    <>
+      <Header />
 
-      <h1>Portal Malvinas</h1>
+      <div className={styles.layout}>
+        <Sidebar />
 
-      <p className={styles.subtitle}>
-        Bienvenido al Dashboard
-      </p>
+        <main className={styles.content}>
+  <h2>Portal Malvinas</h2>
 
-      <div className={styles.grid}>
-
-        <DashboardCard
-          title="Usuarios"
-          icon="👥"
-        />
-
-        <DashboardCard
-          title="Noticias"
-          icon="📰"
-        />
-
-        <DashboardCard
-          title="Eventos"
-          icon="📅"
-        />
-
-        <DashboardCard
-          title="Historia"
-          icon="📍"
-        />
-
-        <DashboardCard
-          title="Configuración"
-          icon="⚙️"
-        />
-
-        <DashboardCard
-          title="Perfil"
-          icon="👤"
-        />
-
+  <p>Bienvenido al Dashboard</p>
+</main>
       </div>
-
-    </div>
+    </>
   );
 }

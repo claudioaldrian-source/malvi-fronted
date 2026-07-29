@@ -33,3 +33,9 @@ select,
 textarea {
   font: inherit;
 }
+
+html,
+body,
+#root {
+    height: 100%;
+}

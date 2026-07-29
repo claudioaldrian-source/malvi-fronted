@@ -1,45 +1,51 @@
-.dashboard{
+.layout {
+    display: flex;
+    min-height: calc(100vh - 220px);
 
-    min-height:100vh;
+    overflow-y: auto;
+}
 
-    background:#0b0d12;
+.content {
+    flex: 1;
+    position: relative;
+        padding: 40px;
+}
 
-    color:white;
+.content h2{
 
-    padding:60px;
+    color: red;
+
+    font-size:38px;
+
+    margin-bottom:10px;
 
 }
 
-.dashboard h1{
+.content p{
 
-    text-align:center;
+    color:#4b627d;
 
-    font-size:42px;
-
-}
-
-.subtitle{
-
-    text-align:center;
-
-    margin-top:12px;
-
-    margin-bottom:50px;
-
-    color:#9ba3af;
+    font-size:18px;
 
 }
 
-.grid{
+.content::before {
+    content: "";
 
-    display:grid;
+    position: absolute;
+    inset: 0;
 
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    background-image: url("../../assets/backgrounds/fondo_malvinas_claro.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 
-    gap:28px;
+    opacity: 0.95;
 
-    max-width:900px;
+    z-index: 0;
+}
 
-    margin:auto;
-
+.content > * {
+    position: relative;
+    z-index: 1;
 }

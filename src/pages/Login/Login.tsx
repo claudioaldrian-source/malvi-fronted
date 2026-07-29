@@ -26,7 +26,8 @@ function Login() {
 localStorage.setItem('role', data.role)
 localStorage.setItem('nombre', data.nombre)
 localStorage.setItem('apellido', data.apellido)
-      navigate({ to: '/' })
+// Ir al Dashboard
+      navigate({ to: '/dashboard' })
     } catch (error: any) {
       setError(error.message)
     } finally {
