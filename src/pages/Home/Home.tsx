@@ -116,6 +116,13 @@ const apellido = localStorage.getItem('apellido')
   return } navigate({ to: '/create-user' })  }}> + Agregar</Button>)}
 
           <Button variant="secondary" onClick={handleLogout}>Cerrar sesión</Button>
+
+          <Button
+  variant="secondary"
+  onClick={() => navigate({ to: "/dashboard" })}
+>
+  🏠 Volver al Panel
+</Button>
           
         </div>
       </div>

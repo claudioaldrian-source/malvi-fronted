@@ -24,6 +24,23 @@ const navigate = useNavigate();
   👤 Perfil
 </button>
 
+<button onClick={() => navigate({ to: "/profile" })}>
+  👤 Perfil
+</button>
+
+<button
+  onClick={() => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("role");
+    localStorage.removeItem("nombre");
+    localStorage.removeItem("apellido");
+
+    navigate({ to: "/login" });
+  }}
+>
+  🚪 Cerrar sesión
+</button>
+
     </aside>
   );
 }
