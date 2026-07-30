@@ -7,6 +7,8 @@ import { getUsers } from '@/api/getUsers'
 import { updateUser } from '@/api/updateUser'
 import type { User } from '@/api/types'
 import { avatars } from '@/config/avatars'
+import GenderBadge from '@/components/ui/GenderBadge/GenderBadge'
+import LocationLink from "@/components/ui/LocationLink/LocationLink";
 
 const ROLES = ['ROOT', 'ADMIN', 'USER', 'GUEST']
 
@@ -155,8 +157,11 @@ const apellido = localStorage.getItem('apellido')
                     </div>
                   </td>
                   <td className={styles.td}>{user.email}</td>
-                  <td className={styles.td}>{user.genero}</td>
-                  <td className={styles.td}>{user.localidad}</td>
+
+                  <td className={styles.td}> <GenderBadge gender={user.genero} /> </td>
+                  
+                  <td className={styles.td}> <LocationLink city={user.localidad} /></td>
+                 
                   <td className={styles.td}>
                     <span className={`${styles.badge} ${styles[`badge__${user.role.toLowerCase()}`] ?? ''}`}>
                       {user.role}
