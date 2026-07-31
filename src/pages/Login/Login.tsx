@@ -3,8 +3,8 @@ import { Link, useNavigate } from '@tanstack/react-router'
 import styles from './Login.module.css'
 import Button from '@/components/ui/Button/Button'
 import { login } from '@/api/login'
-import planetBg from '@/assets/planeta_espejo_vacio.png'
-
+import planetBg from '@/assets/pucara_malvinas_gris_sinf.png'
+import islasMapa from "@/assets/islas_malvinas_mapa_sinf.png";
 
 function Login() {
   const navigate = useNavigate()
@@ -91,6 +91,13 @@ localStorage.setItem('apellido', data.apellido)
 
   <div className={styles.grid}></div>
 
+
+<img
+  src={islasMapa}
+  alt="Mapa Islas Malvinas"
+  className={styles.islas}
+/>
+
   <img
     src={planetBg}
     alt="Planeta Tierra"
@@ -104,17 +111,13 @@ localStorage.setItem('apellido', data.apellido)
     </span>
 
     <h2>
-      Ya sos parte
+      Se parte de este
       <br />
-      de la <span>nueva era</span>
+      Sentimiento<span> Nacional...</span>
     </h2>
 
     <p>
-      La tecnología evoluciona cada día.
-      <br />
-      Ingresá y seguí construyendo
-      <br />
-      el futuro.
+      BIENVENIDO VETERANO
     </p>
 
     <div className={styles.cards}>
@@ -123,17 +126,16 @@ localStorage.setItem('apellido', data.apellido)
         <div className={styles.icon}>🧠</div>
 
         <div>
-          <h3>Inteligencia Artificial</h3>
-          <p>Potenciando ideas y creando soluciones.</p>
-        </div>
+          <h3>UNA IMÁGEN...</h3>
+                  </div>
       </div>
 
       <div className={styles.card}>
         <div className={styles.icon}>⚛️</div>
 
         <div>
-          <h3>React + TypeScript</h3>
-          <p>Tecnologías modernas y escalables.</p>
+          <h3>MILES DE REACCIONES...</h3>
+          
         </div>
       </div>
 
@@ -141,8 +143,8 @@ localStorage.setItem('apellido', data.apellido)
         <div className={styles.icon}>🚀</div>
 
         <div>
-          <h3>Desarrollo FullStack</h3>
-          <p>Construimos experiencias sin límites.</p>
+          <h3>UN MISMO SENTIMIENTO...</h3>
+          
         </div>
       </div>
 

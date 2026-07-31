@@ -19,11 +19,7 @@ const navigate = useNavigate();
       <button>📍 Historia</button>
 
       <button>⚙ Configuración</button>
-
-      <button onClick={() => navigate({ to: "/profile" })}>
-  👤 Perfil
-</button>
-
+      
 <button onClick={() => navigate({ to: "/profile" })}>
   👤 Perfil
 </button>

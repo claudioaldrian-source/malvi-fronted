@@ -1,10 +1,12 @@
 import { Link } from '@tanstack/react-router'
-import styles from '../Auth/Auth.module.css'
+import styles from '../Register/Register.module.css'
 import Button from '@/components/ui/Button/Button'
 import planetBg from '@/assets/planeta_luminoso.png'
+import pucara from '@/assets/pucara_camuflado_sinf.png'
+
 
 function Register() {
-  return (
+    return (
     <main className={styles.container}>
 
       <section className={styles.left}>
@@ -31,31 +33,33 @@ function Register() {
 
       <section 
         className={styles.right}
-        style={{ backgroundImage: `url(${planetBg})` }}
+        style= {{ backgroundImage: `url(${planetBg})` }}
       >
+<img
+  src={pucara}
+  alt="Avión IA-58 Pucará"
+  className={styles.pucara}
+/>
+
         <div className={styles.grid}></div>
         <div className={styles.circleOne}></div>
         <div className={styles.circleTwo}></div>
 
         <div className={styles.hero}>
 
-          <div className={styles.badge}>✨ Nuevo</div>
+                  
 
-          <div className={styles.logo}>
-            ARG
-          </div>
-
-          <h2>Bienvenido</h2>
+    <h2>Bienvenido Veterano</h2>
 
           <p>
-            Diseñando interfaces modernas
-            con React + TypeScript.
+            POR SIEMPRE 
+            HÉROES.
           </p>
 
           <ul className={styles.features}>
-            <li>⚡ Rápido y liviano</li>
-            <li>🔒 Seguro por diseño</li>
-            <li>🎨 UI moderna</li>
+            <li>⚡ Últimas Noticias.</li>
+            <li>🔒 Historias.</li>
+            <li>🎨 Imágenes y videos.</li>
           </ul>
         </div>
       </section>

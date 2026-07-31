@@ -376,6 +376,22 @@ right: -10px;
   color: rgba(255,255,255,.88);
   max-width: 420px;
 }
+
+.islas {
+  position: absolute;
+
+  width: 750px;
+
+  right: 10px;
+
+  top: 400px;
+
+  opacity: 0.40;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
   
   /* ============================================================
                     MOBILE

@@ -3,7 +3,8 @@ import { Link, useNavigate } from '@tanstack/react-router'
 import styles from '../Auth/Auth.module.css'
 import Button from '@/components/ui/Button/Button'
 import { createUser } from '@/api/createUser'
-import planeta from '@/assets/planeta_espejo.png'
+import pucara from '@/assets/pucara_camuflado_sinf.png'
+import planeta from '@/assets/planeta_luminoso.png'
 
 function CreateUser() {
   const navigate = useNavigate()
@@ -104,37 +105,38 @@ function CreateUser() {
         </form>
       </section>
 
-      <section
+     <section
   className={styles.right}
   style={{ backgroundImage: `url(${planeta})` }}
 >
-  <div className={styles.grid}></div>
-  <div className={styles.circleOne}></div>
-  <div className={styles.circleTwo}></div>
+<img
+  src={pucara}
+  alt="Avión IA-58 Pucará"
+  className={styles.pucara}
+/>
 
-  <div className={styles.hero}>
+        <div className={styles.grid}></div>
+        <div className={styles.circleOne}></div>
+        <div className={styles.circleTwo}></div>
 
-    <div className={styles.badge}>✨ Nuevo</div>
+        <div className={styles.hero}>
 
-    <div className={styles.logo}>
-      ARG
-    </div>
+                  
 
-    <h2>Bienvenido</h2>
+    <h2>Bienvenido Veterano</h2>
 
-    <p>
-      Diseñando interfaces modernas
-      con React + TypeScript.
-    </p>
+          <p>
+            POR SIEMPRE 
+            HÉROES.
+          </p>
 
-    <ul className={styles.features}>
-      <li>⚡ Rápido y liviano</li>
-      <li>🔒 Seguro por diseño</li>
-      <li>🎨 UI moderna</li>
-    </ul>
-
-  </div>
-</section>
+          <ul className={styles.features}>
+            <li>⚡ Últimas Noticias.</li>
+            <li>🔒 Historias.</li>
+            <li>🎨 Imágenes y videos.</li>
+          </ul>
+        </div>
+      </section>
 
     </main>
   )
